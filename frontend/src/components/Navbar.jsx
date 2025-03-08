@@ -49,16 +49,16 @@ const Navbar = () => {
                         {/* show dropdowns */}
                         {
                             isDropdownOpen && (
-                                <div>
-                                    <ul>
+                                <div className='absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-md z-40'>
+                                    <ul className='py-2'>
                                         {
-                                            navigation.map((item) => {
-                                                <li key={item.name}>
-                                                    <Link to={item.href}>
+                                            navigation.map((item) => (
+                                                <li key={item.name} onClick={() => setIsDropdownOpen(false)}>
+                                                    <Link to={item.href} className='block px-4 py-2 text-sm hover:bg-gray-100'>
                                                         {item.name}
                                                     </Link>
                                                 </li>
-                                            })
+                                            ))
                                         }
                                     </ul>
                                 </div>
