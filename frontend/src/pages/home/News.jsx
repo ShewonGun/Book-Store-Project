@@ -6,7 +6,8 @@ import news4 from '../../assets/news/news-4.png'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import { Pagination } from 'swiper/modules';
+import 'swiper/css/navigation';
+import { Pagination, Navigation } from 'swiper/modules';
 import { Link } from 'react-router-dom'
 
 const news = [
@@ -50,6 +51,7 @@ const News = () => {
         <Swiper
         slidesPerView={1}
         spaceBetween={30}
+        navigation={true}
         pagination={{
           clickable: true,
         }}
@@ -67,7 +69,7 @@ const News = () => {
             spaceBetween: 50,
           },
         }}
-        modules={[Pagination]}
+        modules={[Pagination, Navigation]}
         className="mySwiper"
       >
         
@@ -84,7 +86,7 @@ const News = () => {
                             <p className='text-sm text-gray-600'>{item.description}</p>
 
                         </div>
-                        <div>
+                        <div className='flex flex-shrink-0'>
                             <img src={item.image} alt='' className='w-full object-cover'/>
                         </div>
                     </div>
