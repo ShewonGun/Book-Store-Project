@@ -15,6 +15,10 @@ const Login = () => {
 
       const onSubmit = (data) => console.log(data)
 
+      const handleGoogleSignIn = () => {
+        
+      }
+
   return (
     <div className='h-[calc(100vh-120px)] flex justify-center items-center'>
         <div className='w-full max-w-sm mx-auto bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4'>
@@ -50,7 +54,10 @@ const Login = () => {
 
             {/* google sign in */}
             <div className='mt-4'>
-                <button type="submit" className='w-full flex flex-wrap gap-1 items-center justify-center bg-secondary hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none'>
+                <button 
+                type='submit'
+                onClick={handleGoogleSignIn}
+                className='w-full flex flex-wrap gap-1 items-center justify-center bg-secondary hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none'>
                     <FaGoogle className='mr-2'/>
                     Sign in with Google
                 </button>
